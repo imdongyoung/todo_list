@@ -1,0 +1,39 @@
+.todos-container {
+  box-sizing: border-box;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+}
+
+.todo-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.todo-input {
+  display: flex;
+  border: none;
+  outline: none;
+}
+
+.todo-input input {
+  flex-grow: 30;
+  border: none;
+  background-color: #f3f3f3;
+  outline: none;
+}
+
+.todo-input div {
+  text-align: center;
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+hr {
+  background-color: rgb(194, 194, 194);
+  height: 1px;
+  border: 0;
+}

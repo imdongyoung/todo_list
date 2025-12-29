@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/home/index.css" />
+
+    <script type="module" src="/js/home/index.js"></script>
+
+    <title>To Do List</title>
+  </head>
+
+  <body>
+    <div class="todos-container">
+      <div class="todo-title">To Do List</div>
+      <div class="todo-input">
+        <input type="text" />
+        <div>+</div>
+      </div>
+      <hr />
+      <div>
+        <% todos.forEach(todo=> { %>
+        <div><%= todo.description %></div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>
