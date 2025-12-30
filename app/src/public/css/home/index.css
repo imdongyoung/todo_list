@@ -97,7 +97,7 @@
 .edit-btn:hover,
 .todo-input-wrapper div:hover,
 .edit-submit:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 hr {

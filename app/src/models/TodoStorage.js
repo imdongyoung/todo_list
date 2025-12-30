@@ -5,7 +5,7 @@ const db = require("../config/db");
 class TodoStorage {
   static getTodos() {
     return new Promise((resolve, reject) => {
-      const query = "SELECT * from todos";
+      const query = "SELECT * FROM todos";
       db.query(query, (err, data) => {
         if (err) reject(`${err}`);
         resolve(data);
