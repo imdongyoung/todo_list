@@ -13,7 +13,7 @@ class Todo {
 
       return { success: true, status: 200, data };
     } catch (err) {
-      return { success: false, status: 409, msg: err };
+      return { success: false, status: 500, msg: err };
     }
   }
 
@@ -25,7 +25,7 @@ class Todo {
 
       return { success: true, status: 201, data: result };
     } catch (err) {
-      return { success: false, status: 409, msg: err };
+      return { success: false, status: 500, msg: err };
     }
   }
 
@@ -37,7 +37,7 @@ class Todo {
 
       return { success: true, status: 200, data: result };
     } catch (err) {
-      return { success: false, status: 409, msg: err };
+      return { success: false, status: 500, msg: err };
     }
   }
 
@@ -49,7 +49,7 @@ class Todo {
 
       return { success: true, status: 200, data: result };
     } catch (err) {
-      return { success: false, status: 409, msg: err };
+      return { success: false, status: 500, msg: err };
     }
   }
 
@@ -61,7 +61,7 @@ class Todo {
 
       return { success: true, status: 200, data: result };
     } catch (err) {
-      return { success: false, status: 409, msg: err };
+      return { success: false, status: 500, msg: err };
     }
   }
 }

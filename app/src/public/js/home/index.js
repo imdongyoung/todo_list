@@ -1,3 +1,5 @@
+"use strict";
+
 const submitBtn = document.querySelector("#todo-submit");
 const input = document.querySelector("#todo-input");
 
@@ -34,7 +36,7 @@ function createTodo() {
         input.value = "";
         input.focus();
       } else {
-        throw new Error("에러 발생");
+        console.error(res.msg);
       }
     })
     .catch((err) => {
@@ -58,7 +60,7 @@ function renderTodos() {
 
         todoContainer.innerHTML = todosHTML;
       } else {
-        throw new Error("에러 발생");
+        console.error(res.msg);
       }
     })
     .catch((err) => {
@@ -124,7 +126,7 @@ window.deleteTodo = function (event) {
       if (res.success) {
         renderTodos();
       } else {
-        throw new Error("에러 발생");
+        console.error(res.msg);
       }
     })
     .catch((err) => {
@@ -175,7 +177,7 @@ window.editSubmit = function (event) {
       if (res.success) {
         renderTodos();
       } else {
-        throw new Error("에러 발생");
+        console.error(res.msg);
       }
     })
     .catch((err) => {
@@ -205,7 +207,7 @@ window.completeTodo = function (event) {
       if (res.success) {
         renderTodos();
       } else {
-        throw new Error("에러 발생");
+        console.error(res.msg);
       }
     })
     .catch((err) => {
