@@ -92,7 +92,7 @@ function createHTML(todos) {
       </div>
 
       <div class="todo-edit-row" id="todo-edit-row-${todo.id}">
-        <input type="checkbox" ${todo.is_check ? "checked" : ""} class="todo-checkbox" id="todo-checkbox-${todo.id}" />
+        <input type="checkbox" disabled ${todo.is_check ? "checked" : ""} class="todo-checkbox" id="todo-checkbox-${todo.id}" />
         <input type="text" value="${todo.description}" class="edit-input" id="edit-input-${todo.id}" />
         <div class="todo-btn-container">
           <div class="edit-submit" onclick="editSubmit(event)" data-id="${todo.id}">
@@ -189,6 +189,11 @@ window.completeTodo = function (event) {
   const id = event.currentTarget.parentElement.parentElement.dataset.id;
 
   const checkbox = document.querySelector(`#todo-checkbox-${id}`);
+  console.log(checkbox.style);
+  if (0) {
+    alert("바꿔라");
+    return;
+  }
 
   const req = {
     id,
