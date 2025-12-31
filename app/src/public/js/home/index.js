@@ -1,9 +1,9 @@
 "use strict";
 
-import createTodo from "./createTodo.js";
-import { editTodo, editSubmit } from "./editTodo.js";
 import renderTodos from "./renderTodo.js";
+import createTodo from "./createTodo.js";
 import completeTodo from "./completeTodo.js";
+import { editTodo, editSubmit } from "./editTodo.js";
 import deleteTodo from "./deleteTodo.js";
 
 const submitBtn = document.querySelector("#todo-submit");
@@ -16,12 +16,12 @@ input.addEventListener("keypress", (event) => {
   }
 });
 
-renderTodos();
-
-window.deleteTodo = deleteTodo;
+window.completeTodo = completeTodo;
 
 window.editTodo = editTodo;
 
 window.editSubmit = editSubmit;
 
-window.completeTodo = completeTodo;
+window.deleteTodo = deleteTodo;
+
+renderTodos();
